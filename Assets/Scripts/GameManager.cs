@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int matchesCount, turnsCount;
     [SerializeField] private Text matchesText, turnsText;
     [SerializeField] private int totalPairs;
+    [SerializeField] private GameObject restartMenu;
 
     void Start()
     {
+        restartMenu.SetActive(false);
         totalPairs = (SetLevel.HorizontalLayoutCount * SetLevel.VerticalLayoutCount) / 2;
     }
 
@@ -65,6 +67,11 @@ public class GameManager : MonoBehaviour
     {
          yield return new WaitForSeconds(1f);
          //Debug.Log("Matched game over");
-         SceneManager.LoadScene(0);
+         restartMenu.SetActive(true);
+    }
+
+    public void GameRestart()
+    {
+        SceneManager.LoadScene(1);
     }
 }
