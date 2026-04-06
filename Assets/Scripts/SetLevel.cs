@@ -28,13 +28,9 @@ selectedLevel = levelLayoutArray[levelIndex];//default
     }
 
    public void SetDifficultyOfLevl(int _levelIndex)
-    {
-//if(Leveltoggles[_levelIndex].isOn)
-//{       
+    {     
        levelIndex = _levelIndex;
        selectedLevel = levelLayoutArray[levelIndex];
-//}
-//print(levelLayoutArray[levelIndex][1]);
     }
 
    void LoadSceneOnClick()

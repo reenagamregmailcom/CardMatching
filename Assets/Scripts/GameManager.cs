@@ -14,6 +14,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int totalPairs;
     [SerializeField] private GameObject restartMenu;
 
+
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        // Enforce the singleton: if an instance already exists, destroy this one
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        
+        // Optional: Keep this object alive across scene loads
+        //DontDestroyOnLoad(gameObject);
+    }
     void Start()
     {
         restartMenu.SetActive(false);
@@ -73,5 +90,10 @@ public class GameManager : MonoBehaviour
     public void GameRestart()
     {
         SceneManager.LoadScene(1);
+    }
+
+    void OnDestroy()
+    {
+        Instance = null;
     }
 }

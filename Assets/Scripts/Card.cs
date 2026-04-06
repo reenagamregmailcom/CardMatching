@@ -12,7 +12,7 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-        manager = FindObjectOfType<GameManager>();
+        manager = GameManager.Instance;//FindObjectOfType<GameManager>();
     }
 
     public void OnClick()

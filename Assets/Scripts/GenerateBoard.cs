@@ -12,9 +12,10 @@ public class GenerateBoard : MonoBehaviour
    [SerializeField] private GameObject cardPrefab;
    [SerializeField] private RectTransform panelRow;
    [SerializeField] private Button loadMenuSceneButton;
-   public Sprite[] icons;
    [SerializeField] private List<int> ids;
    [SerializeField] private List<Card> allCards;
+   public Sprite[] icons;
+ 
     void Start()
     {
         //Button btn = loadMenuSceneButton.GetComponent<Button>();
@@ -40,8 +41,8 @@ public class GenerateBoard : MonoBehaviour
             rowParent = Instantiate(panelRow, Board);
             for(int columnIndex = 0; columnIndex < SetLevel.VerticalLayoutCount ; columnIndex++)
             {
-                GameObject freshcard = Instantiate(cardPrefab, rowParent);
-                Card c = freshcard.GetComponent<Card>();
+                GameObject freshCard = Instantiate(cardPrefab, rowParent);
+                Card c = freshCard.GetComponent<Card>();
                 int cardId = rowIndex * SetLevel.VerticalLayoutCount + columnIndex;
                 c.id = ids[cardId];
                 c.icon = icons[ids[cardId]];
