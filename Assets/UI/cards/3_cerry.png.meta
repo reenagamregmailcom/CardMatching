@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1303edcff45744b71886916a3bd558e6
+guid: a2fa6f6bf6361459bb7d0dc7a01ebe6d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4230446483887560845
-    second: cerry_0
+      213: -8869453829385186148
+    second: 3_cerry_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cerry_0
+      name: 3_cerry_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 377e496365f6a45c0800000000000000
-      internalID: -4230446483887560845
+      spriteID: c9494cb0cbe59e480800000000000000
+      internalID: -8869453829385186148
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cerry_0: -4230446483887560845
+      3_cerry_0: -8869453829385186148
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

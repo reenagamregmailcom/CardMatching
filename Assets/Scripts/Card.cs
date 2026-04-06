@@ -1,0 +1,38 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Card : MonoBehaviour
+{
+   public int id;
+    public Sprite icon, hideIcon;
+    [SerializeField] private Image myImage;
+    [SerializeField] private Button myButton;
+
+    [SerializeField] private GameManager manager;
+
+    void Start()
+    {
+        manager = FindObjectOfType<GameManager>();
+    }
+
+    public void OnClick()
+    {
+        if (manager.canFlip)
+        {
+            Flip();
+            manager.CardFlipped(this);
+        }
+    }
+
+    public void Flip()
+    {
+        myImage.sprite = icon;
+        myButton.interactable = false;
+    }
+
+    public void Hide()
+    {
+         myImage.sprite = hideIcon;
+         myButton.interactable = true;
+    }
+}

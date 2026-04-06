@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 75a367693c1114a68af48c09e7b32512
+guid: 2ad748d56332f44879813cd9f05272e6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5755410639089308127
-    second: icecream_0
+      213: -5972513802265389748
+    second: 4_duck_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,12 +126,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icecream_0
+      name: 4_duck_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 402
+        width: 396
         height: 396
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12ee398648ca020b0800000000000000
-      internalID: -5755410639089308127
+      spriteID: c459adf275e5d1da0800000000000000
+      internalID: -5972513802265389748
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icecream_0: -5755410639089308127
+      4_duck_0: -5972513802265389748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

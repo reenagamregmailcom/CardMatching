@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -509,9 +510,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GenerateBoard
   Board: {fileID: 1487390645}
-  card: {fileID: 8883530180067686693, guid: a2b75915e4b894b218badcd376182007, type: 3}
+  cardPrefab: {fileID: 8883530180067686693, guid: a2b75915e4b894b218badcd376182007, type: 3}
   panelRow: {fileID: 7155597401852662733, guid: 4513516c1f07a4735bd4c04df9ca89e9, type: 3}
   loadMenuSceneButton: {fileID: 1208912915}
+  icons:
+  - {fileID: 5346127141700309750, guid: 3cea6fbebed0d4d3bb9e59658154790c, type: 3}
+  - {fileID: -1784211127028188858, guid: 9a036792bd26c4721ba986c334bf1c2c, type: 3}
+  - {fileID: -7452362698730797129, guid: 02636ed6208004a60b2bd562ae3cf73b, type: 3}
+  - {fileID: -8869453829385186148, guid: a2fa6f6bf6361459bb7d0dc7a01ebe6d, type: 3}
+  - {fileID: -5972513802265389748, guid: 2ad748d56332f44879813cd9f05272e6, type: 3}
+  - {fileID: 6848310229089919145, guid: 0fda5ec06e16a4bf4b1e9d4bfcefe4dc, type: 3}
+  - {fileID: 6748525494110824575, guid: a73eb12d774d848dc9ac94d2a5420372, type: 3}
+  - {fileID: -8275794230372059767, guid: 6e97843c56ee34503b2cc47761e7473b, type: 3}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89603a78bb3a742aa8c1d6fbfabb2003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  firstCard: {fileID: 0}
+  secondCard: {fileID: 0}
+  canFlip: 1
+  matchesCount: 0
+  turnsCount: 0
+  matchesText: {fileID: 165634213}
+  turnsText: {fileID: 1140133792}
 --- !u!1 &617459448
 GameObject:
   m_ObjectHideFlags: 0
