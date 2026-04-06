@@ -17,8 +17,8 @@ public class GenerateBoard : MonoBehaviour
    [SerializeField] private List<Card> allCards;
     void Start()
     {
-        Button btn = loadMenuSceneButton.GetComponent<Button>();
-		btn.onClick.AddListener(LoadMenuSceneOnClick);
+        //Button btn = loadMenuSceneButton.GetComponent<Button>();
+		loadMenuSceneButton.onClick.AddListener(LoadMenuSceneOnClick);
 
        ids = new List<int>();
 
