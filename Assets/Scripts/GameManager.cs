@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text matchesText, turnsText;
     [SerializeField] private int totalPairs;
     [SerializeField] private GameObject restartMenu;
+    [SerializeField] private AudioSource myAudioSource;
+    public AudioClip gameoverSound, matchSound, mismatchSound;
 
 
     public static GameManager Instance { get; private set; }
@@ -35,6 +37,8 @@ public class GameManager : MonoBehaviour
     {
         restartMenu.SetActive(false);
         totalPairs = (SetLevel.HorizontalLayoutCount * SetLevel.VerticalLayoutCount) / 2;
+        //matchesCount = PlayerPrefs.GetInt("Score");
+        //matchesText.text = matchesCount.ToString();
     }
 
     public void CardFlipped(Card card)
@@ -54,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         canFlip = false;
 
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
 
         if (firstCard.id == secondCard.id)
         {
@@ -62,14 +66,20 @@ public class GameManager : MonoBehaviour
             secondCard = null;
             matchesCount++;
             matchesText.text = matchesCount.ToString();
+            //PlayerPrefs.SetInt("Score", matchesCount);
+            myAudioSource.Play(); 
+            myAudioSource.PlayOneShot(matchSound); 
         }
         else
         {
+            yield return new WaitForSeconds(1f);
             firstCard.Hide();
             secondCard.Hide();
-
             firstCard = null;
             secondCard = null;
+
+            myAudioSource.Play(); 
+            myAudioSource.PlayOneShot(mismatchSound); 
         }
         turnsCount++;
         turnsText.text = turnsCount.ToString();
@@ -85,6 +95,8 @@ public class GameManager : MonoBehaviour
          yield return new WaitForSeconds(1f);
          //Debug.Log("Matched game over");
          restartMenu.SetActive(true);
+         myAudioSource.Play(); 
+         myAudioSource.PlayOneShot(gameoverSound); 
     }
 
     public void GameRestart()

@@ -9,6 +9,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Button myButton;
 
     [SerializeField] private GameManager manager;
+    [SerializeField] private AudioSource flipSound;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Card : MonoBehaviour
         {
             Flip();
             manager.CardFlipped(this);
+            flipSound.Play();
         }
     }
 
